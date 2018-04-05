@@ -1,2 +1,4 @@
 # Processamento-Digital-de-Imagens
-Relatorios dos laboratorios da  materia Processamento Digital de Imagens da UnB
+Relatórios dos laboratorios da  matéria Processamento Digital de Imagens da UnB
+ministrada no semestre 1/2018 pela professora Mylene Queiroz
+
