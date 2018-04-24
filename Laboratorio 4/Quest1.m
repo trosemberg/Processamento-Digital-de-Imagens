@@ -22,3 +22,15 @@ figure;
 imshow(ang);
 imwrite(ang,"fase.png");
 #fim da fase
+
+#completa
+imgabs = abs(fft2(img));
+ang = fft2(img);
+ang = (exp(1i*angle(ang)));
+total = imgabs.*ang;
+total = ifft2(total);
+total = total/(max(max(total)));
+figure;
+imshow(total);
+imwrite(total,"total.png");
+#fim da completa
