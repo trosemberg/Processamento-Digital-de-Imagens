@@ -6,7 +6,6 @@ img = imread("woman.png");
 imgabs = fft2(img);
 imgabs = ifft2(abs(imgabs));
 imgabs = (imgabs)/max(max(imgabs));
-%imgabs = log10(imgabs);
 imgabs = fftshift(imgabs);
 figure;
 imshow(imgabs);
