@@ -39,13 +39,13 @@ function [novaimg] = filtrogeral (img, filter)            %le imagem
   =img(1:tamimg(1),1:tamimg(2)); %preenche a imagem temporaria para que tenha uma borda ao redor da imagem original, sendo tal borda do tamanho do filtrogeral
 
   novaimg = zeros(tamimg(1),tamimg(2));%cria a nova imagem que sera a filtrada
-  for(linha = tamfil(1)+1:1:tamimg(1) + tamfil(1)) %for para varrer as linhas 
-    for(coluna = tamfil(2)+1:1:tamimg(2) + tamfil(2)) %for para varrer as colunas
-      for(x=1:1:tamfil(1))%for para varrer o tamanho do filtrogeral em linha
-        for(y=1:1:tamfil(2)) %for para varrer o tamanho do filtrogeral em coluna
+  for linha = tamfil(1)+1:1:tamimg(1) + tamfil(1) %for para varrer as linhas 
+    for coluna = tamfil(2)+1:1:tamimg(2) + tamfil(2) %for para varrer as colunas
+      for x=1:1:tamfil(1)%for para varrer o tamanho do filtrogeral em linha
+        for y=1:1:tamfil(2) %for para varrer o tamanho do filtrogeral em coluna
           novaimg(linha-tamfil(1),coluna-tamfil(2)) = novaimg(linha-tamfil(1),coluna-tamfil(2))+imgtemp(linha-ceil(tamfil(1)/2)+x,coluna-ceil(tamfil(2)/2)+y)* filter(x,y);
         end
       end
     end
-  end;
-endfunction
+  end
+end

@@ -8,7 +8,7 @@ fh1 = (fh1)/max(max(fh1));
 fh1 = fftshift(fh1);
 figure;
 imshow(fh1);
-imwrite(fh1,"moduloh1.png");
+imwrite(fh1,'moduloh1.png');
 %terminando de visualizar o h1
 
 %visualizando h2
@@ -18,7 +18,7 @@ fh2 = (fh2)/max(max(fh2));
 fh2 = fftshift(fh2);
 figure;
 imshow(fh2);
-imwrite(fh2,"moduloh2.png");
+imwrite(fh2,'moduloh2.png');
 %terminando de visualizar o h2
 
 %aplicando os filtros h1 e h2 no dominio da frequencia nas imagens
@@ -36,8 +36,8 @@ end
 if (max(max(img1h2))) ~= 0
   img1h2 = img1h2/(max(max(img1h2)));
 end
-imwrite(img1h1,"footballh1.png");
-imwrite(img1h2,"footballh2.png");
+imwrite(img1h1,'footballh1.png');
+imwrite(img1h2,'footballh2.png');
 
 fimg2 = fft2(img2);
 fimg2h1 = filtrogeral(fimg2,h1);
@@ -51,8 +51,8 @@ if (max(max(img2h2))) ~=0
   img2h2 = img2h2/(max(max(img2h2)));
 end
 
-imwrite(img2h1,"noiseballh1.png");
-imwrite(img2h2,"noiseballh2.png");
+imwrite(img2h1,'noiseballh1.png');
+imwrite(img2h2,'noiseballh2.png');
 
 fimg3 = fft2(img3);
 fimg3h1 = filtrogeral(fimg3,h1);
@@ -65,5 +65,5 @@ end
 if (max(max(img3h2))) ~= 0
   img3h2 = img3h2/(max(max(img3h2)));
 end
-imwrite(img3h1,"womanh1.png");
-imwrite(img3h2,"womanh2.png");
+imwrite(img3h1,'womanh1.png');
+imwrite(img3h2,'womanh2.png');
