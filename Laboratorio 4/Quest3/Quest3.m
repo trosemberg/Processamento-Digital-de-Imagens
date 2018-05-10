@@ -46,13 +46,19 @@ imwrite(printtotalcerto,'nothc_correto.png');
 %Termino da letra B
 
 %começo da letra c
-imnoise = imnoise.*ifftshift(totalcerto);
+imgnoise = imnoise.*fftshift(totalcerto);
 imnoise_sem_norm = fft2(nois);
 imnoise_sem_norm = imnoise_sem_norm.*totalcerto;
 
 figure; 
-imshow(imnoise);
-imwrite(imnoise,'Freq_noise_filtrada.png');
+imshow(imgnoise);
+imwrite(imgnoise,'Freq_noise_filtrada.png');
+
+imgnoise = imnoise.*(total);
+figure; 
+imshow(imgnoise);
+imwrite(imgnoise,'Freq_noise_filtrada_errada.png');
+
 
 imnoise_sem_norm = ifft2(imnoise_sem_norm);
 figure; 
