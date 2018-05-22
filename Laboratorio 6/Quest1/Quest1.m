@@ -1,0 +1,11 @@
+imagem = imread('flower.png');
+tamimg = size(imagem);
+Red = zeros(tamimg(1),tamimg(2),tamimg(3));
+Green = zeros(tamimg(1),tamimg(2),tamimg(3));
+Blue = zeros(tamimg(1),tamimg(2),tamimg(3));
+Red(:,:,1) = imagem(:,:,1);
+Green(:,:,2) = imagem(:,:,2);
+Blue(:,:,3) = imagem(:,:,3);
+imwrite(uint8(Red),'RED.png');
+imwrite(uint8(Green),'GREEN.png');
+imwrite(uint8(Blue),'Blue.png');
